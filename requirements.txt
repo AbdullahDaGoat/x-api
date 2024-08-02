@@ -1,0 +1,10 @@
+quart
+twscrape
+python-dotenv
+cachetools
+orjson
+aiohttp
+aiohttp-retry
+aiodns
+uvloop
+hypercorn
