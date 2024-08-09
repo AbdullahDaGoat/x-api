@@ -43,11 +43,9 @@ def get_api():
     db_path = "accounts.db"
     api = API(db_path if os.path.exists(db_path) else None)
     
-    cookies = 'auth_token=eaad6d24e74d8d158ca6f14722408c96c3496c60; ct0=b430ef26e19e937dd939cbc8b7ea8655e97e89bdb65f1ca11319880365831edcab3f27e711a409bebfd0ea7a37aee2b9dcddf2aa94b569d18d3908529a814416e034f4e93a870e807c91a65512c347cc; _twitter_sess=BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7AA%253D%253D--1164b91ac812d853b877e93ddb612b7471bebc74; gt=1818409008165797941; guest_id=v1%3A172237746597069589; guest_id_ads=v1%3A172237746597069589; guest_id_marketing=v1%3A172237746597069589; kdt=7HO7eqcRoMzhIJILMcfamecO5MZtaWB1GVghUQv5; lang=en; night_mode=2; personalization_id=v1_zRBQsjgIcNuoxImS7QqgDA==; twid=u%3D1818411227401297920'
 
     async def add_account():
         if not os.path.exists(db_path):
-            await api.pool.add_account("DebateMyRoomba1", "Mississauga9241$", "732023@pdsb.net", "Lahore9241!", cookies=cookies)
 
     asyncio.create_task(add_account())
 
