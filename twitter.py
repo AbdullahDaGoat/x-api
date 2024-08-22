@@ -40,9 +40,10 @@ request_queue = asyncio.Queue()
 def get_api():
     db_path = "accounts.db"
     api = API(db_path if os.path.exists(db_path) else None)
-
+    cookies = "cookies"
     async def add_account():
         if not os.path.exists(db_path):
+            await api.pool.add_account(username="your_username", password="your_password",  cookies=cookies)
 
     asyncio.create_task(add_account())
     set_log_level("DEBUG")
